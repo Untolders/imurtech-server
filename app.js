@@ -9,6 +9,12 @@ const axios = require('axios');
 
 const app = express();
 app.use(cors());
+app.use(cors({
+  origin: "https://imurtech.com",
+  methods: "GET,POST",
+  allowedHeaders: "Content-Type"
+}));
+
 app.use(bodyParser.json());
 
 const port = process.env.PORT
