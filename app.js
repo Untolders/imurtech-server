@@ -10,10 +10,11 @@ const axios = require('axios');
 const app = express();
 
 app.use(cors({
-  origin: ["https://imurtech.com"],
+  origin: "*",  
   methods: "GET,POST",
   allowedHeaders: "Content-Type"
 }));
+
 
 app.use(bodyParser.json());
 
