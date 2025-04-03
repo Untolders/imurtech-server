@@ -59,11 +59,31 @@ Send a JSON object with the following structure:
 }
 ```
 
-## Security Considerations
-- Ensure you use **app passwords** instead of plain credentials for Gmail authentication.
+## Code Overview
+
+### `app.js`
+This file contains the main logic for handling form submissions and sending emails:
+- Uses **Express** for handling requests
+- Uses **Nodemailer** to send emails via Gmail
+- Implements **Google reCAPTCHA** validation
+- Defines two endpoints:
+  - `GET /send-email`: Displays a welcome message
+  - `POST /send-email`: Processes form submissions and sends an email
+
+### `.env`
+Stores sensitive credentials and configurations:
+```env
+SENDER_EMAIL=your-email@gmail.com
+RECEIVER_EMAIL=receiver-email@example.com
+EMAIL_PASSWORD=your-email-password
+PORT=5000
+RECAPTCHA_SECRET=your-recaptcha-secret-key
+```
+
+### Security Considerations
+- Use **app passwords** instead of plain credentials for Gmail authentication.
 - Never expose your `.env` file in public repositories.
 - Use HTTPS in production for secure communication.
 
 ## License
 This project is licensed under the MIT License.
-
