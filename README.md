@@ -29,7 +29,7 @@ This Node.js application provides an email service using Express, Nodemailer, an
    ```env
    SENDER_EMAIL=your-email@gmail.com
    RECEIVER_EMAIL=receiver-email@example.com
-   EMAIL_PASSWORD=your-email-password
+   EMAIL_PASSWORD=your-email-password(app password)
    PORT=5000
    RECAPTCHA_SECRET=your-recaptcha-secret-key
    ```
